@@ -19,9 +19,11 @@ The majority of existing technologies tailor and provide advice on the customer 
 # App Description
 
 1. Who are the users of the application? That is, who will be accessing the website? What impacts might this app have on minority groups?
+
 The users of the app are people who want to discover and support local, family-owned, and minority-owned businesses, as well as the business owners themselves. Customers can search for shops and learn their stories, while business owners can create or update profiles to share information about their services, hours, and contact details. The app helps minority groups by giving them more visibility and opportunities to reach supportive customers.
 
 2. What will the users do with the web app? What kind of interactive features are you expecting to provide? Remember that your app will need to include at least "two and a half" significant features; be sure to explicitly identify and explain what all of them are!
+
 - Search and Filter Businesses (Feature 1): Users can search by category, location, or owner type  (women-owned, minority-owned).
 - Business Profile Management (Feature 2): Business owners can create or edit profiles, add descriptions, upload photos, and update their information.
 - Favorites or Reviews (Half Feature): Users can mark businesses as favorites or leave reviews to recommend them to others.
