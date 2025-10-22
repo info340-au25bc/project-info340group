@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Business owners can create and manage their business profiles on LocalConnect. Reach more customers and share your story.">
+    <title>For Business Owners - ThriveTogether</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>ThriveTogether</h1>
+            </div>
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-bar" placeholder="Search Bar">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section for Business Owners -->
+        <section class="business-owner-hero">
+            <div class="container">
+                <div class="hero-content-split">
+                    <div class="hero-text">
+                        <h1>Grow Your Local Business</h1>
+                        <p class="hero-lead">
+                            Connect with customers who want to support local, family-owned, and minority-owned businesses. 
+                            Create your free profile and share your story with the community.
+                        </p>
+                        <div class="hero-benefits">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✓</span>
+                                <span>Free business listing</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✓</span>
+                                <span>Reach engaged customers</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✓</span>
+                                <span>Share your unique story</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✓</span>
+                                <span>Build community connections</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="img/placeholder-business-owner.jpg" alt="Happy business owner in their shop">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Profile Form Section -->
+        <section class="business-form-section">
+            <div class="container">
+                <div class="form-intro">
+                    <h2>Create or Update Your Business Profile</h2>
+                    <p>Fill out the form below to add your business to LocalConnect. All fields marked with * are required.</p>
+                </div>
+
+                <form class="business-profile-form" action="#" method="post">
+                    <!-- Basic Information -->
+                    <fieldset>
+                        <legend>Basic Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="business-name">Business Name *</label>
+                            <input type="text" id="business-name" name="business-name" required placeholder="Enter your business name">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="owner-name">Owner Name *</label>
+                                <input type="text" id="owner-name" name="owner-name" required placeholder="Your full name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="business-email">Email Address *</label>
+                                <input type="email" id="business-email" name="email" required placeholder="email@example.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="business-phone">Phone Number *</label>
+                                <input type="tel" id="business-phone" name="phone" required placeholder="(206) 555-0123">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="business-website">Website</label>
+                                <input type="url" id="business-website" name="website" placeholder="https://www.yourbusiness.com">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="business-category">Business Category *</label>
+                            <select id="business-category" name="category" required>
+                                <option value="">Select a category...</option>
+                                <option value="restaurant">Restaurants & Cafes</option>
+                                <option value="retail">Retail & Shopping</option>
+                                <option value="services">Professional Services</option>
+                                <option value="health">Health & Wellness</option>
+                                <option value="arts">Arts & Entertainment</option>
+                                <option value="home">Home & Garden</option>
+                                <option value="automotive">Automotive</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="business-description">Business Description *</label>
+                            <textarea id="business-description" name="description" rows="4" required 
+                                placeholder="Describe your business in a few sentences. What makes you unique?"></textarea>
+                            <small class="form-hint">Max 500 characters</small>
+                        </div>
+                    </fieldset>
+
+                    <!-- Location Information -->
+                    <fieldset>
+                        <legend>Location</legend>
+                        
+                        <div class="form-group">
+                            <label for="street-address">Street Address *</label>
+                            <input type="text" id="street-address" name="address" required placeholder="1234 Main Street">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City *</label>
+                                <input type="text" id="city" name="city" required placeholder="Seattle">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="state">State *</label>
+                                <select id="state" name="state" required>
+                                    <option value="">Select state...</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="CA">California</option>
+                                    <!-- More states would be here -->
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="zip">ZIP Code *</label>
+                                <input type="text" id="zip" name="zip" required placeholder="98122" pattern="[0-9]{5}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="neighborhood">Neighborhood</label>
+                            <input type="text" id="neighborhood" name="neighborhood" placeholder="e.g., Capitol Hill, Ballard, Fremont">
+                        </div>
+                    </fieldset>
+
+                    <!-- Business Characteristics -->
+                    <fieldset>
+                        <legend>Business Ownership & Characteristics</legend>
+                        
+                        <div class="form-group">
+                            <label>Ownership Type (check all that apply)</label>
+                            <div class="checkbox-list">
+                                <label>
+                                    <input type="checkbox" name="ownership[]" value="minority">
+                                    <span>Minority-Owned</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="ownership[]" value="women">
+                                    <span>Women-Owned</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="ownership[]" value="veteran">
+                                    <span>Veteran-Owned</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="ownership[]" value="family">
+                                    <span>Family-Owned</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="ownership[]" value="lgbtq">
+                                    <span>LGBTQ+-Owned</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="ownership[]" value="disabled">
+                                    <span>Disabled-Owned</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="year-established">Year Established</label>
+                            <input type="number" id="year-established" name="year" min="1800" max="2025" placeholder="2010">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="business-story">Your Story</label>
+                            <textarea id="business-story" name="story" rows="6" 
+                                placeholder="Share your business's story. What inspired you to start? What are your values? What makes your business special to the community?"></textarea>
+                            <small class="form-hint">This helps customers connect with your business on a personal level</small>
+                        </div>
+                    </fieldset>
+
+                    <!-- Hours of Operation -->
+                    <fieldset>
+                        <legend>Hours of Operation</legend>
+                        
+                        <div class="hours-inputs">
+                            <div class="hours-row">
+                                <label class="day-label">
+                                    <input type="checkbox" name="days[]" value="monday" checked>
+                                    <span>Monday</span>
+                                </label>
+                                <input type="time" name="monday-open" value="09:00">
+                                <span>to</span>
+                                <input type="time" name="monday-close" value="17:00">
+                            </div>
+                            
+                            <div class="hours-row">
+                                <label class="day-label">
+                                    <input type="checkbox" name="days[]" value="tuesday" checked>
+                                    <span>Tuesday</span>
+                                </label>
+                                <input type="time" name="tuesday-open" value="09:00">
+                                <span>to</span>
+                                <input type="time" name="tuesday-close" value="17:00">
+                            </div>
+                            
+                            <div class="hours-row">
+                                <label class="day-label">
+                                    <input type="checkbox" name="days[]" value="wednesday" checked>
+                                    <span>Wednesday</span>
+                                </label>
+                                <input type="time" name="wednesday-open" value="09:00">
+                                <span>to</span>
+                                <input type="time" name="wednesday-close" value="17:00">
+                            </div>
+                            
+                            <div class="hours-row">
+                                <label class="day-label">
+                                    <input type="checkbox" name="days[]" value="thursday" checked>
+                                    <span>Thursday</span>
+                                </label>
+                                <input type="time" name="thursday-open" value="09:00">
+                                <span>to</span>
+                                <input type="time" name="thursday-close" value="17:00">
+                            </div>
+                            
+                            <div class="hours-row">
+                                <label class="day-label">
+                                    <input type="checkbox" name="days[]" value="friday" checked>
+                                    <span>Friday</span>
+                                </label>
+                                <input type="time" name="friday-open" value="09:00">
+                                <span>to</span>
+                                <input type="time" name="friday-close" value="17:00">
+                            </div>
+                            
+                            <div class="hours-row">
+                                <label class="day-label">
+                                    <input type="checkbox" name="days[]" value="saturday">
+                                    <span>Saturday</span>
+                                </label>
+                                <input type="time" name="saturday-open" value="10:00">
+                                <span>to</span>
+                                <input type="time" name="saturday-close" value="15:00">
+                            </div>
+                            
+                            <div class="hours-row">
+                                <label class="day-label">
+                                    <input type="checkbox" name="days[]" value="sunday">
+                                    <span>Sunday</span>
+                                </label>
+                                <input type="time" name="sunday-open" value="10:00">
+                                <span>to</span>
+                                <input type="time" name="sunday-close" value="15:00">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Amenities and Features -->
+                    <fieldset>
+                        <legend>Amenities & Features</legend>
+                        
+                        <div class="form-group">
+                            <label>Available Services & Amenities (check all that apply)</label>
+                            <div class="checkbox-list">
+                                <label>
+                                    <input type="checkbox" name="amenities[]" value="dine-in">
+                                    <span>Dine-In</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="amenities[]" value="takeout">
+                                    <span>Takeout</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="amenities[]" value="delivery">
+                                    <span>Delivery</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="amenities[]" value="outdoor-seating">
+                                    <span>Outdoor Seating</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="amenities[]" value="wheelchair">
+                                    <span>Wheelchair Accessible</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="amenities[]" value="parking">
+                                    <span>Parking Available</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="amenities[]" value="wifi">
+                                    <span>Free WiFi</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="amenities[]" value="reservations">
+                                    <span>Accepts Reservations</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="amenities[]" value="family-friendly">
+                                    <span>Family Friendly</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="amenities[]" value="pet-friendly">
+                                    <span>Pet Friendly</span>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Social Media -->
+                    <fieldset>
+                        <legend>Social Media (Optional)</legend>
+                        
+                        <div class="form-group">
+                            <label for="facebook">Facebook</label>
+                            <input type="url" id="facebook" name="facebook" placeholder="https://facebook.com/yourbusiness">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="instagram">Instagram</label>
+                            <input type="text" id="instagram" name="instagram" placeholder="@yourbusiness">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="twitter">Twitter</label>
+                            <input type="text" id="twitter" name="twitter" placeholder="@yourbusiness">
+                        </div>
+                    </fieldset>
+
+                    <!-- Photos Upload -->
+                    <fieldset>
+                        <legend>Photos</legend>
+                        
+                        <div class="form-group">
+                            <label for="logo-upload">Business Logo</label>
+                            <input type="file" id="logo-upload" name="logo" accept="image/*">
+                            <small class="form-hint">Upload your business logo (JPG, PNG, max 2MB)</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cover-upload">Cover Photo</label>
+                            <input type="file" id="cover-upload" name="cover" accept="image/*">
+                            <small class="form-hint">Upload a cover photo showing your business (JPG, PNG, max 5MB)</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="gallery-upload">Additional Photos</label>
+                            <input type="file" id="gallery-upload" name="gallery[]" accept="image/*" multiple>
+                            <small class="form-hint">Upload up to 10 photos of your products, interior, team, etc.</small>
+                        </div>
+                    </fieldset>
+
+                    <!-- Verification -->
+                    <fieldset>
+                        <legend>Verification</legend>
+                        
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="terms" required>
+                                <span>I confirm that I am authorized to create this business profile and that all information provided is accurate *</span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="marketing">
+                                <span>I would like to receive updates and marketing communications from LocalConnect</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Form Actions -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-large">Create Business Profile</button>
+                        <button type="button" class="btn btn-secondary">Save as Draft</button>
+                        <button type="reset" class="btn btn-text">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Success Stories Section -->
+        <section class="success-stories">
+            <div class="container">
+                <h2>Success Stories from Local Business Owners</h2>
+                <p class="section-subtitle">See how LocalConnect has helped businesses like yours grow</p>
+                
+                <div class="testimonials-grid">
+                    <article class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="img/placeholder-owner-1.jpg" alt="Maria Rodriguez, owner of Maria's Mexican Kitchen">
+                        </div>
+                        <blockquote>
+                            "LocalConnect helped me reach customers who truly value authentic, family-owned businesses. 
+                            In just 6 months, our customer base grew by 40%!"
+                        </blockquote>
+                        <cite>
+                            <strong>Maria Rodriguez</strong><br>
+                            Maria's Mexican Kitchen
+                        </cite>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="img/placeholder-owner-2.jpg" alt="Sarah Chen, owner of Rainbow Pages Bookstore">
+                        </div>
+                        <blockquote>
+                            "Being listed as an LGBTQ+-owned business brought in so many wonderful customers who share our values. 
+                            This platform truly makes a difference."
+                        </blockquote>
+                        <cite>
+                            <strong>Sarah Chen</strong><br>
+                            Rainbow Pages Bookstore
+                        </cite>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="img/placeholder-owner-3.jpg" alt="James Williams, owner of Bean & Brew Coffee Co.">
+                        </div>
+                        <blockquote>
+                            "As a veteran-owned business, it means everything to connect with a community that wants to support us. 
+                            LocalConnect made it easy to tell our story."
+                        </blockquote>
+                        <cite>
+                            <strong>James Williams</strong><br>
+                            Bean & Brew Coffee Co.
+                        </cite>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section class="resources-section">
+            <div class="container">
+                <h2>Resources for Business Owners</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">📚</div>
+                        <h3>Business Growth Guide</h3>
+                        <p>Tips and strategies for growing your local business and engaging with customers.</p>
+                        <a href="#" class="btn btn-secondary btn-sm">Download Guide</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">💬</div>
+                        <h3>Community Forums</h3>
+                        <p>Connect with other local business owners, share experiences, and get advice.</p>
+                        <a href="#" class="btn btn-secondary btn-sm">Join Forums</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">📊</div>
+                        <h3>Marketing Resources</h3>
+                        <p>Free tools and templates to help you market your business effectively.</p>
+                        <a href="#" class="btn btn-secondary btn-sm">Access Tools</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">🎓</div>
+                        <h3>Webinars & Training</h3>
+                        <p>Free educational webinars on digital marketing, customer service, and more.</p>
+                        <a href="#" class="btn btn-secondary btn-sm">View Schedule</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <h2>Questions? We're Here to Help!</h2>
+                    <p>Our team is ready to assist you in getting your business listed and making the most of LocalConnect.</p>
+                    <div class="cta-buttons">
+                        <a href="mailto:business@localconnect.com" class="btn btn-primary">Email Us</a>
+                        <a href="tel:+12065550123" class="btn btn-secondary">Call (206) 555-0123</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="businesses.html">Businesses</a>
+        </div>
+    </footer>
+</body>
+</html>
+
