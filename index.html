@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ThriveTogether</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kady Tran, Anuujin, Hriesha, Vivian">
+        <meta name="description" content="ThriveTogether helps customers discover and connect with small businesses in the Seattle area.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/x-icon" href="img/icon.png">
+    </head>
+
+    <body>
+        <header>
+        <h1>ThriveTogether</h1>
+        <nav>
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="search.html">Search</a>
+                <a href="favorites.html">Favorites</a>
+                <a href="add.html">Add Business</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Welcome to ThriveTogether</h2>
+            <p>We are building a stronger community by helping customers connect with local businesses. Start by telling us who you are:</p>
+        </section>
+
+        <section class="quiz-form">
+            <form action="redirect.html" method="get">
+                <fieldset>
+                    <legend>Are you a customer or a business owner?</legend>
+                    <label>
+                        <input type="radio" name="userType" value="customer" required>
+                        I am a customer looking for local businesses
+                    </label><br>
+                    <label>
+                        <input type="radio" name="userType" value="business" required>
+                        I am a business owner wanting to showcase my shop
+                    </label><br>
+                    <button type="submit">Continue</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    </body>
+</html>
