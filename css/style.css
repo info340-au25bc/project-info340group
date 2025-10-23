@@ -444,4 +444,24 @@ footer {
     text-decoration: underline;
 }
 
-/* media styling work-in-progress*/
+/* media styling */
+@media (min-width: 768px){
+    .intro h2 {
+        font-size: 2.5rem;
+    }
+    .hero-content-split {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1024px) {
+    .intro h2 {
+        font-size: 3rem;
+    }
+    .hero-content-split {
+        gap: 3rem;
+    }
+    .resource-card {
+        padding: 2rem;
+    }
+}
