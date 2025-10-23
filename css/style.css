@@ -310,7 +310,7 @@ input:focus, select:focus, textarea:focus {
 
 .btn-secondary {
     background-color: #c8e6c9;
-    color: #004d40
+    color: #004d40;
 }
 
 .btn-secondary:hover {
@@ -331,11 +331,11 @@ input:focus, select:focus, textarea:focus {
     margin: 2rem 0;
 }
 
-.testimonials-card {
+.testimonial-card {
     background-color: #ffffff;
     border-radius: 12px;
     padding: 1.5rem;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
     text-align: center;
 }
 
