@@ -27,23 +27,23 @@
         <section class="intro">
             <h2>Welcome to ThriveTogether</h2>
             <p>We are building a stronger community by helping customers connect with local businesses. Start by telling us who you are:</p>
-        </section>
-
-        <section class="quiz-form">
-            <form action="redirect.html" method="get">
-                <fieldset>
-                    <legend>Are you a customer or a business owner?</legend>
-                    <label>
-                        <input type="radio" name="userType" value="customer" required>
-                        I am a customer looking for local businesses
-                    </label><br>
-                    <label>
-                        <input type="radio" name="userType" value="business" required>
-                        I am a business owner wanting to showcase my shop
-                    </label><br>
-                    <button type="submit">Continue</button>
-                </fieldset>
-            </form>
+            
+            <div class="quiz-form">
+                <form action="redirect.html" method="get">
+                    <fieldset>
+                        <legend>Are you a customer or a business owner?</legend>
+                        <label>
+                            <input type="radio" name="userType" value="customer" required>
+                            I am a customer looking for local businesses
+                        </label><br>
+                        <label>
+                            <input type="radio" name="userType" value="business" required>
+                            I am a business owner wanting to showcase my shop
+                        </label><br>
+                        <button type="submit">Continue</button>
+                    </fieldset>
+                </form>
+            </div>
         </section>
         <!-- Hero Section for Business Owners -->
         <section class="business-owner-hero">
@@ -86,7 +86,7 @@
             <div class="container">
                 <div class="form-intro">
                     <h2>Create or Update Your Business Profile</h2>
-                    <p>Fill out the form below to add your business to ThriveTogether. All fields marked with * are required.</p>
+                    <p>Fill out the form below to add your business to ThriveTogether. <strong>All fields marked with * are required.</strong></p>
                 </div>
 
                 <form class="business-profile-form" action="#" method="post">
@@ -236,74 +236,78 @@
                         <legend>Hours of Operation</legend>
                         
                         <div class="hours-inputs">
-                            <div class="hours-row">
-                                <label class="day-label">
-                                    <input type="checkbox" name="days[]" value="monday" checked>
-                                    <span>Monday</span>
-                                </label>
-                                <input type="time" name="monday-open" value="09:00">
-                                <span>to</span>
-                                <input type="time" name="monday-close" value="17:00">
+                            <div class="hours-column">
+                                <div class="hours-row">
+                                    <label class="day-label">
+                                        <input type="checkbox" name="days[]" value="monday" checked>
+                                        <span>Monday</span>
+                                    </label>
+                                    <input type="time" name="monday-open" value="09:00">
+                                    <span>to</span>
+                                    <input type="time" name="monday-close" value="17:00">
+                                </div>
+                                
+                                <div class="hours-row">
+                                    <label class="day-label">
+                                        <input type="checkbox" name="days[]" value="tuesday" checked>
+                                        <span>Tuesday</span>
+                                    </label>
+                                    <input type="time" name="tuesday-open" value="09:00">
+                                    <span>to</span>
+                                    <input type="time" name="tuesday-close" value="17:00">
+                                </div>
+                                
+                                <div class="hours-row">
+                                    <label class="day-label">
+                                        <input type="checkbox" name="days[]" value="wednesday" checked>
+                                        <span>Wednesday</span>
+                                    </label>
+                                    <input type="time" name="wednesday-open" value="09:00">
+                                    <span>to</span>
+                                    <input type="time" name="wednesday-close" value="17:00">
+                                </div>
+                                
+                                <div class="hours-row">
+                                    <label class="day-label">
+                                        <input type="checkbox" name="days[]" value="thursday" checked>
+                                        <span>Thursday</span>
+                                    </label>
+                                    <input type="time" name="thursday-open" value="09:00">
+                                    <span>to</span>
+                                    <input type="time" name="thursday-close" value="17:00">
+                                </div>
                             </div>
                             
-                            <div class="hours-row">
-                                <label class="day-label">
-                                    <input type="checkbox" name="days[]" value="tuesday" checked>
-                                    <span>Tuesday</span>
-                                </label>
-                                <input type="time" name="tuesday-open" value="09:00">
-                                <span>to</span>
-                                <input type="time" name="tuesday-close" value="17:00">
-                            </div>
-                            
-                            <div class="hours-row">
-                                <label class="day-label">
-                                    <input type="checkbox" name="days[]" value="wednesday" checked>
-                                    <span>Wednesday</span>
-                                </label>
-                                <input type="time" name="wednesday-open" value="09:00">
-                                <span>to</span>
-                                <input type="time" name="wednesday-close" value="17:00">
-                            </div>
-                            
-                            <div class="hours-row">
-                                <label class="day-label">
-                                    <input type="checkbox" name="days[]" value="thursday" checked>
-                                    <span>Thursday</span>
-                                </label>
-                                <input type="time" name="thursday-open" value="09:00">
-                                <span>to</span>
-                                <input type="time" name="thursday-close" value="17:00">
-                            </div>
-                            
-                            <div class="hours-row">
-                                <label class="day-label">
-                                    <input type="checkbox" name="days[]" value="friday" checked>
-                                    <span>Friday</span>
-                                </label>
-                                <input type="time" name="friday-open" value="09:00">
-                                <span>to</span>
-                                <input type="time" name="friday-close" value="17:00">
-                            </div>
-                            
-                            <div class="hours-row">
-                                <label class="day-label">
-                                    <input type="checkbox" name="days[]" value="saturday">
-                                    <span>Saturday</span>
-                                </label>
-                                <input type="time" name="saturday-open" value="10:00">
-                                <span>to</span>
-                                <input type="time" name="saturday-close" value="15:00">
-                            </div>
-                            
-                            <div class="hours-row">
-                                <label class="day-label">
-                                    <input type="checkbox" name="days[]" value="sunday">
-                                    <span>Sunday</span>
-                                </label>
-                                <input type="time" name="sunday-open" value="10:00">
-                                <span>to</span>
-                                <input type="time" name="sunday-close" value="15:00">
+                            <div class="hours-column">
+                                <div class="hours-row">
+                                    <label class="day-label">
+                                        <input type="checkbox" name="days[]" value="friday" checked>
+                                        <span>Friday</span>
+                                    </label>
+                                    <input type="time" name="friday-open" value="09:00">
+                                    <span>to</span>
+                                    <input type="time" name="friday-close" value="17:00">
+                                </div>
+                                
+                                <div class="hours-row">
+                                    <label class="day-label">
+                                        <input type="checkbox" name="days[]" value="saturday">
+                                        <span>Saturday</span>
+                                    </label>
+                                    <input type="time" name="saturday-open" value="10:00">
+                                    <span>to</span>
+                                    <input type="time" name="saturday-close" value="15:00">
+                                </div>
+                                
+                                <div class="hours-row">
+                                    <label class="day-label">
+                                        <input type="checkbox" name="days[]" value="sunday">
+                                        <span>Sunday</span>
+                                    </label>
+                                    <input type="time" name="sunday-open" value="10:00">
+                                    <span>to</span>
+                                    <input type="time" name="sunday-close" value="15:00">
+                                </div>
                             </div>
                         </div>
                     </fieldset>
@@ -416,7 +420,7 @@
                         <div class="form-group">
                             <label>
                                 <input type="checkbox" name="marketing">
-                                <span>I would like to receive updates and marketing communications from LocalConnect</span>
+                                <span>I would like to receive updates and marketing communications from ThriveTogether</span>
                             </label>
                         </div>
                     </fieldset>
@@ -495,7 +499,7 @@
                         <a href="#" class="btn btn-secondary btn-sm">Download Guide</a>
                     </div>
                     
-                    <div class="resource-card">
+                    <div class="resource-card resource-card:hover">
                         <div class="resource-icon">💬</div>
                         <h3>Community Forums</h3>
                         <p>Connect with other local business owners, share experiences, and get advice.</p>
@@ -526,7 +530,7 @@
                     <h2>Questions? We're Here to Help!</h2>
                     <p>Our team is ready to assist you in getting your business listed and making the most of ThriveTogether.</p>
                     <div class="cta-buttons">
-                        <a href="mailto:business@localconnect.com" class="btn btn-primary">Email Us</a>
+                        <a href="mailto:business@thrivetogether.com" class="btn btn-primary">Email Us</a>
                         <a href="tel:+12065550123" class="btn btn-secondary">Call (206) 555-0123</a>
                     </div>
                 </div>
