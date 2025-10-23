@@ -4,12 +4,18 @@
     padding: 0;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: "Georgia", Arial, Helvetica, sans-serif;
     background-color: #F5F5F5;
     color: #333333;
     line-height: 1.6;
     margin: 0;
+    padding: 0;
 }
 
 h2, h3, legend {
@@ -25,9 +31,10 @@ a:hover {
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 header {
@@ -40,9 +47,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .logo h1 {
@@ -72,13 +80,32 @@ header {
 
 .intro {
     text-align: center;
-    padding: 2rem 0;
+    padding-top: 4rem;
+    background: #f5f5f5;
+    margin-bottom: 2rem;
+}
+
+.intro h2 {
+    font-size: 3rem;
+    color: #00695c;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.intro p {
+    font-size: 1.3rem;
+    color: #555;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    font-weight: 400;
 }
 
 .quiz-form {
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin: 0;
 }
 
 .quiz-form form {
@@ -86,6 +113,20 @@ header {
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quiz-form legend {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1F7A75;
+    margin-bottom: 1rem;
+    padding: 0;
 }
 
 .quiz-form button {
@@ -106,6 +147,8 @@ header {
 .business-owner-hero {
     background-color: #e0f2f1;
     padding: 3rem 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 /* for reference https://developer.mozilla.org/en-US/docs/Web/CSS/gap */
@@ -152,6 +195,12 @@ header {
 
 /* styling for business profile form */
 
+.business-form-section {
+    background-color: #f5f5f5;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
 .business-profile-form fieldset {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -166,6 +215,11 @@ legend {
     padding: 0 0.5rem;
 }
 
+.form-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -175,7 +229,7 @@ legend {
 .form-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 input, select, textarea {
@@ -190,18 +244,58 @@ input:focus, select:focus, textarea:focus {
 }
 
 .checkbox-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-list label {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.checkbox-list label:hover {
+    background-color: #f0f9f8;
+}
+
+.checkbox-list input[type="checkbox"] {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.checkbox-list span {
+    font-size: 0.95rem;
+    color: #333;
 }
 
 .hours-inputs {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hours-column {
+    display: flex;
+    flex-direction: column;
     gap: 0.75rem;
 }
 
 .hours-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.day-label {
+    min-width: 80px;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -226,7 +320,7 @@ input:focus, select:focus, textarea:focus {
 
 .btn-secondary {
     background-color: #c8e6c9;
-    color: #004d40
+    color: #004d40;
 }
 
 .btn-secondary:hover {
@@ -247,11 +341,11 @@ input:focus, select:focus, textarea:focus {
     margin: 2rem 0;
 }
 
-.testimonials-card {
+.testimonial-card {
     background-color: #ffffff;
     border-radius: 12px;
     padding: 1.5rem;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
     text-align: center;
 }
 
@@ -276,11 +370,47 @@ input:focus, select:focus, textarea:focus {
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid #e0f2f1;
+}
+
+.resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .resource-icon {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #00897b;
+    display: block;
+}
+
+.resource-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1F7A75;
+    margin-bottom: 0.75rem;
+}
+
+.resource-card p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.resource-card .btn {
+    margin-top: auto;
+    align-self: center;
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
 }
 
 /* call to action styling */
@@ -290,6 +420,7 @@ input:focus, select:focus, textarea:focus {
     color: #004d40;
     padding: 3rem 0;
     text-align: center;
+    margin-top: 4rem;
 }
 
 .cta-buttons {
@@ -306,7 +437,6 @@ footer {
     color: #e0e0e0;
     padding: 1.5rem 0;
     text-align: center;
-    margin-top: 3rem;
 }
 
 .footer-nav {
@@ -324,4 +454,253 @@ footer {
     text-decoration: underline;
 }
 
-/* media styling work-in-progress*/
+
+/* Responsive Design */
+
+@media (max-width: 575px) {
+    .testimonial-card {
+        background-color: #e0d3c4;
+    }
+    .hours-inputs {
+        grid-template-columns: 1fr; 
+    }
+
+    header {
+        background-color: #908273;
+        color: white;
+        padding: 1rem 0;
+    }
+
+    .business-owner-hero > .container {
+        background-color: #e0d3c4;
+        border-radius: 8px;
+    }
+    
+    .business-owner-hero {
+        background-color: #9d9286;
+    }
+
+    .intro h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .intro p {
+        font-size: 1rem;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .quiz-form form {
+        padding: 1.5rem;
+        width: 95%;
+    }
+    .quiz-form button {
+        background-color: #9d9286
+    }
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    .hero-lead {
+        font-size: 0.9rem;
+    }
+    .business-profile-form fieldset {
+        padding: 1rem;
+    }
+    .hours-inputs, .checkbox-list {
+        gap: 1rem;
+    }
+    .testimonials-grid, .resources-grid {
+        gap: 1rem;
+    }
+
+    .cta-section {
+        background-color: #e0d3c4;
+    }
+    .cta-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Small: Phones in landscape (≥576px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .testimonial-card {
+        background-image: url('../img/coffee1.jpg');
+    }
+
+    header {
+        background-image: url('../img/coffee1.jpg');
+        color: white;
+        padding: 1rem 0;
+    }
+
+    .hours-inputs {
+        grid-template-columns: 1fr; 
+    }
+
+    .business-owner-hero > .container {
+        background-color: #e0d3c4;
+        border-radius: 8px;
+    }
+    
+    .business-owner-hero {
+        background-color: #9d9286;
+    }
+
+    .quiz-form button {
+        background-color: #9d9286
+    }
+
+    .cta-section {
+        background-color: #e0d3c4;
+    }
+
+    .intro {
+        padding: 2rem 0;
+        padding-top: 4rem;
+        padding-bottom: 0rem;
+    }
+    .intro h2 {
+        font-size: 1.8rem;
+    }
+    .intro p {
+        font-size: 1.1rem;
+        max-width: 85%;
+    }
+    .quiz-form form {
+        padding: 2rem;
+        max-width: 400px;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-lead {
+        font-size: 1rem;
+    }
+    .business-profile-form fieldset {
+        padding: 1.5rem;
+    }
+    .hours-inputs, .checkbox-list {
+        gap: 1.2rem;
+    }
+}
+
+/* Medium: Tablets (≥768px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .testimonial-card {
+        background-color: #dcdcd4;
+    }
+
+    .hours-inputs {
+        grid-template-columns: 1fr; 
+    }
+
+    header {
+        background-color: #a5d4cf;
+        color: white;
+        padding: 1rem 0;
+    }
+
+    .intro h2 {
+        font-size: 2.5rem;
+    }
+    .intro p {
+        font-size: 1.4rem;
+        max-width: 700px;
+    }
+    .quiz-form form {
+        padding: 2.5rem;
+        max-width: 500px;
+    }
+    .hero-content-split {
+        flex-direction: row;
+        gap: 3rem;
+    }
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    .hero-lead {
+        font-size: 1.1rem;
+    }
+    .business-profile-form fieldset {
+        padding: 2rem;
+    }
+    .hours-inputs, .checkbox-list {
+        gap: 2rem;
+    }
+    .testimonials-grid, .resources-grid {
+        gap: 2.5rem;
+    }
+    .cta-section h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Large: Laptops/Small desktops (≥1024px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .intro h2 {
+        font-size: 3rem;
+    }
+    .intro p {
+        font-size: 1.6rem;
+    }
+    .quiz-form form {
+        max-width: 600px;
+        padding: 3rem;
+    }
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    .hero-lead {
+        font-size: 1.25rem;
+    }
+    .business-profile-form fieldset {
+        padding: 2.5rem;
+    }
+    .hours-inputs, .checkbox-list {
+        gap: 2.5rem;
+    }
+    .testimonials-grid, .resources-grid {
+        gap: 3rem;
+    }
+    .cta-section h2 {
+        font-size: 2.5rem;
+    }
+    .cta-buttons {
+        gap: 2rem;
+    }
+}
+
+/* Extra Large: Large desktops (≥1200px) */
+@media (min-width: 1200px) {
+    .intro h2 {
+        font-size: 3.5rem;
+    }
+    .intro p {
+        font-size: 1.8rem;
+        max-width: 900px;
+    }
+    .quiz-form form {
+        max-width: 700px;
+        padding: 3.5rem;
+    }
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+    .hero-lead {
+        font-size: 1.5rem;
+    }
+    .business-profile-form fieldset {
+        padding: 3rem;
+    }
+    .hours-inputs, .checkbox-list {
+        gap: 3rem;
+    }
+    .testimonials-grid, .resources-grid {
+        gap: 3.5rem;
+    }
+    .cta-section h2 {
+        font-size: 3rem;
+    }
+    .cta-buttons {
+        gap: 2.5rem;
+    }
+}
