@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Discover Local Businesses - ThriveTogether</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Kady Tran, Anuujin Chadraa, Hriesha Popat, Vivian Lu">
+    <meta name="description" content="Discover and support local, family-owned, and minority-owned businesses in your community.">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>ThriveTogether</h1>
+            </div>
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-bar" placeholder="Search businesses..." id="mainSearch">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="shop-hero">
+            <div class="container">
+                <h2>Discover Amazing Local Businesses</h2>
+                <p>Support your community by finding and connecting with local, family-owned, and minority-owned businesses</p>
+            </div>
+        </section>
+
+        <section class="search-filter-section">
+            <div class="container">
+                <div class="search-filter-container">
+                    <div class="search-box">
+                        <div class="search-input-container">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" placeholder="Search by name, category, or description..." class="search-input">
+                        </div>
+                    </div>
+
+<!-- https://www.w3schools.com/howto/howto_js_filter_elements.asp -->
+                    <div class="filter-buttons">
+                        <div class="filter-group">
+                            <label>Category</label>
+                            <div class="btn-group">
+                                <button class="btn active" onclick="filterSelection('all')">All Categories</button>
+                                <button class="btn" onclick="filterSelection('restaurant')">Restaurants & Cafes</button>
+                                <button class="btn" onclick="filterSelection('retail')">Retail & Shopping</button>
+                                <button class="btn" onclick="filterSelection('services')">Professional Services</button>
+                                <button class="btn" onclick="filterSelection('health')">Health & Wellness</button>
+                                <button class="btn" onclick="filterSelection('arts')">Arts & Entertainment</button>
+                                <button class="btn" onclick="filterSelection('home')">Home & Garden</button>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Location</label>
+                            <div class="btn-group">
+                                <button class="btn active" onclick="filterSelection('all')">All Areas</button>
+                                <button class="btn" onclick="filterSelection('capitol-hill')">Capitol Hill</button>
+                                <button class="btn" onclick="filterSelection('ballard')">Ballard</button>
+                                <button class="btn" onclick="filterSelection('fremont')">Fremont</button>
+                                <button class="btn" onclick="filterSelection('queen-anne')">Queen Anne</button>
+                                <button class="btn" onclick="filterSelection('downtown')">Downtown</button>
+                                <button class="btn" onclick="filterSelection('university-district')">University District</button>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Ownership Type</label>
+                            <div class="btn-group">
+                                <button class="btn active" onclick="filterSelection('all')">All Types</button>
+                                <button class="btn" onclick="filterSelection('minority')">Minority-Owned</button>
+                                <button class="btn" onclick="filterSelection('women')">Women-Owned</button>
+                                <button class="btn" onclick="filterSelection('veteran')">Veteran-Owned</button>
+                                <button class="btn" onclick="filterSelection('family')">Family-Owned</button>
+                                <button class="btn" onclick="filterSelection('lgbtq')">LGBTQ+-Owned</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="container">
+                <div class="results-header">
+                    <h3>Showing 6 local businesses</h3>
+                    <div class="sort-controls">
+                        <label for="sortBy">Sort by:</label>
+                        <select class="sort-select">
+                            <option value="name">Name (A-Z)</option>
+                            <option value="name-desc">Name (Z-A)</option>
+                            <option value="rating">Highest Rated</option>
+                            <option value="newest">Newest</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="business-grid">
+                    <div class="business-card filterDiv">
+                        <div class="business-image">
+                            <img src="img/women.jpg" alt="Maria's Mexican Kitchen">
+                            <div class="business-badges">
+                                <span class="badge badge-minority">Minority</span>
+                                <span class="badge badge-family">Family</span>
+                            </div>
+                        </div>
+                        <div class="business-content">
+                            <h3 class="business-name">Maria's Mexican Kitchen</h3>
+                            <p class="business-description">Authentic Mexican cuisine passed down through generations. Family recipes and fresh ingredients.</p>
+                            <div class="business-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-number">4.8</span>
+                            </div>
+                            <div class="business-details">
+                                <div class="detail-item">
+                                    <span class="detail-icon">📍</span>
+                                    <span>1234 Broadway E, Seattle, WA 98102</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">📞</span>
+                                    <span>(206) 555-0123</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">🕒</span>
+                                    <span>Mon-Sun: 11am-9pm</span>
+                                </div>
+                            </div>
+                            <div class="business-amenities">
+                                <span class="amenity">dine in</span>
+                                <span class="amenity">takeout</span>
+                                <span class="amenity">delivery</span>
+                                <span class="amenity-more">+1 more</span>
+                            </div>
+                            <div class="business-actions">
+                                <button class="btn btn-primary btn-sm">View Details</button>
+                                <button class="btn btn-secondary btn-sm">Add to Favorites</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="business-card filterDiv">
+                        <div class="business-image">
+                            <img src="img/boutique.jpg" alt="Makers Boutique">
+                            <div class="business-badges">
+                                <span class="badge badge-lgbtq">Lgbtq+</span>
+                                <span class="badge badge-women">Women</span>
+                            </div>
+                        </div>
+                        <div class="business-content">
+                            <h3 class="business-name">Makers Boutique</h3>
+                            <p class="business-description">Curated collection of handmade goods from local artisans. Supporting creativity and community.</p>
+                            <div class="business-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-number">4.6</span>
+                            </div>
+                            <div class="business-details">
+                                <div class="detail-item">
+                                    <span class="detail-icon">📍</span>
+                                    <span>5678 NW Market St, Seattle, WA 98107</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">📞</span>
+                                    <span>(206) 555-0456</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">🕒</span>
+                                    <span>Tue-Sat: 10am-7pm, Sun: 12pm-5pm</span>
+                                </div>
+                            </div>
+                            <div class="business-amenities">
+                                <span class="amenity">wheelchair</span>
+                                <span class="amenity">parking</span>
+                            </div>
+                            <div class="business-actions">
+                                <button class="btn btn-primary btn-sm">View Details</button>
+                                <button class="btn btn-secondary btn-sm">Add to Favorites</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="business-card filterDiv">
+                        <div class="business-image">
+                            <img src="img/coffeeguy.jpg" alt="Bean & Brew Coffee Co.">
+                            <div class="business-badges">
+                                <span class="badge badge-veteran">Veteran</span>
+                            </div>
+                        </div>
+                        <div class="business-content">
+                            <h3 class="business-name">Bean & Brew Coffee Co.</h3>
+                            <p class="business-description">Veteran-owned coffee shop serving locally roasted beans and homemade pastries.</p>
+                            <div class="business-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-number">4.9</span>
+                            </div>
+                            <div class="business-details">
+                                <div class="detail-item">
+                                    <span class="detail-icon">📍</span>
+                                    <span>9012 Fremont Ave N, Seattle, WA 98103</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">📞</span>
+                                    <span>(206) 555-0789</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">🕒</span>
+                                    <span>Mon-Fri: 6am-6pm, Sat-Sun: 7am-5pm</span>
+                                </div>
+                            </div>
+                            <div class="business-amenities">
+                                <span class="amenity">dine in</span>
+                                <span class="amenity">takeout</span>
+                                <span class="amenity">wifi</span>
+                                <span class="amenity-more">+1 more</span>
+                            </div>
+                            <div class="business-actions">
+                                <button class="btn btn-primary btn-sm">View Details</button>
+                                <button class="btn btn-secondary btn-sm">Add to Favorites</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="business-card filterDiv">
+                        <div class="business-image">
+                            <img src="img/placeholder image.png" alt="Shop1">
+                            <div class="business-badges">
+                                <span class="badge badge-family">Family</span>
+                            </div>
+                        </div>
+                        <div class="business-content">
+                            <h3 class="business-name">Shop 1</h3>
+                            <p class="business-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                            <div class="business-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-number">4.7</span>
+                            </div>
+                            <div class="business-details">
+                                <div class="detail-item">
+                                    <span class="detail-icon">📍</span>
+                                    <span>Seattle, WA 98105</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">📞</span>
+                                    <span>(999) 999-9999</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">🕒</span>
+                                    <span>Mon-Sat: 9am-6pm, Sun: 10am-4pm</span>
+                                </div>
+                            </div>
+                            <div class="business-amenities">
+                                <span class="amenity">parking</span>
+                                <span class="amenity">wheelchair</span>
+                            </div>
+                            <div class="business-actions">
+                                <button class="btn btn-primary btn-sm">View Details</button>
+                                <button class="btn btn-secondary btn-sm">Add to Favorites</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="business-card filterDiv">
+                        <div class="business-image">
+                            <img src="img/placeholder image.png" alt="Shop 2">
+                            <div class="business-badges">
+                                <span class="badge badge-women">Women</span>
+                                <span class="badge badge-minority">Minority</span>
+                            </div>
+                        </div>
+                        <div class="business-content">
+                            <h3 class="business-name">Shop 2</h3>
+                            <p class="business-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <div class="business-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-number">4.5</span>
+                            </div>
+                            <div class="business-details">
+                                <div class="detail-item">
+                                    <span class="detail-icon">📍</span>
+                                    <span>Seattle, WA 98104</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">📞</span>
+                                    <span>(999) 999-9999</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">🕒</span>
+                                    <span>Mon-Fri: 7am-8pm, Sat-Sun: 8am-6pm</span>
+                                </div>
+                            </div>
+                            <div class="business-amenities">
+                                <span class="amenity">parking</span>
+                                <span class="amenity">wheelchair</span>
+                                <span class="amenity">reservations</span>
+                            </div>
+                            <div class="business-actions">
+                                <button class="btn btn-primary btn-sm">View Details</button>
+                                <button class="btn btn-secondary btn-sm">Add to Favorites</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="business-card filterDiv">
+                        <div class="business-image">
+                            <img src="img/placeholder image.png" alt="Shop 3">
+                            <div class="business-badges">
+                                <span class="badge badge-women">Women</span>
+                                <span class="badge badge-minority">Minority</span>
+                            </div>
+                        </div>
+                        <div class="business-content">
+                            <h3 class="business-name">Shop 3</h3>
+                            <p class="business-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <div class="business-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-number">4.4</span>
+                            </div>
+                            <div class="business-details">
+                                <div class="detail-item">
+                                    <span class="detail-icon">📍</span>
+                                    <span>Seattle, WA 98105</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">📞</span>
+                                    <span>(999) 999-9999</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">🕒</span>
+                                    <span>Wed-Sun: 11am-7pm</span>
+                                </div>
+                            </div>
+                            <div class="business-amenities">
+                                <span class="amenity">wheelchair</span>
+                                <span class="amenity">parking</span>
+                            </div>
+                            <div class="business-actions">
+                                <button class="btn btn-primary btn-sm">View Details</button>
+                                <button class="btn btn-secondary btn-sm">Add to Favorites</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="shop.html">Home</a>
+            <a href="business-details.html">For Business Owners</a>
+            <a href="proposal.html">About</a>
+        </div>
+        <p>&copy; 2025 ThriveTogether | Contact: info@thrivetogether.com</p>
+    </footer>
+
+</body>
+</html>
