@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Customer Profile - ThriveTogether</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Kady Tran, Anuujin Chadraa, Hriesha Popat, Vivian Lu">
+    <meta name="description" content="Your customer profile on ThriveTogether">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>ThriveTogether</h1>
+            </div>
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-bar" placeholder="Search businesses...">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="profile-hero">
+            <div class="container">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img src="img/placeholder image.png" alt="Profile Picture">
+                    </div>
+                    <div class="profile-info">
+                        <h1>Jane Smith</h1>
+                        <p class="profile-location">📍 Seattle, WA</p>
+                        <p class="profile-join-date">Member since January 2024</p>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="btn btn-primary">Edit Profile</button>
+                        <button class="btn btn-secondary">Settings</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-content">
+            <div class="container">
+                <div class="profile-tabs">
+                    <button class="tab-btn active" onclick="openTab(event, 'overview')">Overview</button>
+                    <button class="tab-btn" onclick="openTab(event, 'favorites')">Favorites</button>
+                    <button class="tab-btn" onclick="openTab(event, 'reviews')">My Reviews</button>
+                    <button class="tab-btn" onclick="openTab(event, 'activity')">Activity</button>
+                </div>
+
+                <div id="overview" class="tab-content active">
+                    <div class="profile-grid">
+                        <div class="profile-card">
+                            <h3>Personal Information</h3>
+                            <div class="info-item">
+                                <label>Name:</label>
+                                <span>Jane Smith</span>
+                            </div>
+                            <div class="info-item">
+                                <label>Email:</label>
+                                <span>jane.smith@example.com</span>
+                            </div>
+                            <div class="info-item">
+                                <label>Phone:</label>
+                                <span>(206) 555-0123</span>
+                            </div>
+                            <div class="info-item">
+                                <label>Location:</label>
+                                <span>Seattle, WA</span>
+                            </div>
+                        </div>
+
+                        <div class="profile-card">
+                            <h3>Preferences</h3>
+                            <div class="preferences">
+                                <span class="badge">Restaurants</span>
+                                <span class="badge">Coffee Shops</span>
+                                <span class="badge">Retail</span>
+                                <span class="badge">Family-owned</span>
+                                <span class="badge">Women-owned</span>
+                            </div>
+                            <button class="btn btn-text">Edit Preferences</button>
+                        </div>
+
+                        <div class="profile-card">
+                            <h3>Support Local</h3>
+                            <div class="stat-item">
+                                <h4>28</h4>
+                                <p>Businesses Favorited</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>12</h4>
+                                <p>Reviews Written</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>3</h4>
+                                <p>Months Active</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="favorites" class="tab-content">
+                    <h2>My Favorites</h2>
+                    <div class="business-grid">
+                        <div class="business-card">
+                            <div class="business-image">
+                                <img src="img/women.jpg" alt="Maria's Mexican Kitchen">
+                                <div class="business-badges">
+                                    <span class="badge badge-minority">Minority</span>
+                                    <span class="badge badge-family">Family</span>
+                                </div>
+                            </div>
+                            <div class="business-content">
+                                <h3 class="business-name">Maria's Mexican Kitchen</h3>
+                                <p class="business-description">Authentic Mexican cuisine passed down through generations.</p>
+                                <div class="business-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="rating-number">4.8</span>
+                                </div>
+                                <div class="business-actions">
+                                    <button class="btn btn-primary btn-sm">View Details</button>
+                                    <button class="btn btn-secondary btn-sm">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="business-card">
+                            <div class="business-image">
+                                <img src="img/boutique.jpg" alt="Makers Boutique">
+                                <div class="business-badges">
+                                    <span class="badge badge-lgbtq">Lgbtq+</span>
+                                    <span class="badge badge-women">Women</span>
+                                </div>
+                            </div>
+                            <div class="business-content">
+                                <h3 class="business-name">Makers Boutique</h3>
+                                <p class="business-description">Curated collection of handmade goods from local artisans.</p>
+                                <div class="business-rating">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="rating-number">4.6</span>
+                                </div>
+                                <div class="business-actions">
+                                    <button class="btn btn-primary btn-sm">View Details</button>
+                                    <button class="btn btn-secondary btn-sm">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="reviews" class="tab-content">
+                    <h2>My Reviews</h2>
+                    <div class="reviews-list">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <h3>Maria's Mexican Kitchen</h3>
+                                <div class="review-rating">
+                                    <span class="stars">★★★★★</span>
+                                </div>
+                            </div>
+                            <p class="review-text">Absolutely fantastic! The food was amazing and the service was top-notch. I highly recommend trying their tacos. Can't wait to go back!</p>
+                            <p class="review-date">Posted on March 15, 2024</p>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <h3>Makers Boutique</h3>
+                                <div class="review-rating">
+                                    <span class="stars">★★★★☆</span>
+                                </div>
+                            </div>
+                            <p class="review-text">Loved the unique selection of handmade items. Great place to find special gifts for loved ones. The owner is super friendly too!</p>
+                            <p class="review-date">Posted on March 10, 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="activity" class="tab-content">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <span class="activity-icon">❤️</span>
+                            <div class="activity-content">
+                                <p><strong>Added to favorites</strong> - Bean & Brew Coffee Co.</p>
+                                <span class="activity-date">2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-icon">⭐</span>
+                            <div class="activity-content">
+                                <p><strong>Wrote a review</strong> - Maria's Mexican Kitchen</p>
+                                <span class="activity-date">1 week ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-icon">🔍</span>
+                            <div class="activity-content">
+                                <p><strong>Searched for</strong> - "family restaurants"</p>
+                                <span class="activity-date">2 weeks ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="shop.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="customer-profile.html">Profile</a>
+        </div>
+        <p>&copy; 2025 ThriveTogether | Contact: info@thrivetogether.com</p>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
