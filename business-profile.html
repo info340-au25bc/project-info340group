@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Business Profile - ThriveTogether</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Kady Tran, Anuujin Chadraa, Hriesha Popat, Vivian Lu">
+    <meta name="description" content="Manage your business profile on ThriveTogether">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>ThriveTogether</h1>
+            </div>
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-bar" placeholder="Search businesses...">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="profile-hero">
+            <div class="container">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img src="img/women.jpg" alt="Business Logo">
+                    </div>
+                    <div class="profile-info">
+                        <h1>Maria's Mexican Kitchen</h1>
+                        <p class="profile-location">📍 1234 Broadway E, Seattle, WA 98102</p>
+                        <div class="profile-badges">
+                            <span class="badge badge-minority">Minority-Owned</span>
+                            <span class="badge badge-family">Family-Owned</span>
+                        </div>
+                        <p class="profile-join-date">Listed since January 2024</p>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="btn btn-primary">Edit Profile</button>
+                        <button class="btn btn-secondary">View Public Page</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-content">
+            <div class="container">
+                <div class="profile-tabs">
+                    <button class="tab-btn active" onclick="openTab(event, 'overview')">Overview</button>
+                    <button class="tab-btn" onclick="openTab(event, 'analytics')">Analytics</button>
+                    <button class="tab-btn" onclick="openTab(event, 'reviews')">Reviews</button>
+                    <button class="tab-btn" onclick="openTab(event, 'promotions')">Promotions</button>
+                    <button class="tab-btn" onclick="openTab(event, 'settings')">Settings</button>
+                </div>
+
+                <div id="overview" class="tab-content active">
+                    <div class="profile-grid">
+                        <div class="profile-card">
+                            <h3>Business Information</h3>
+                            <div class="info-item">
+                                <label>Business Name:</label>
+                                <span>Maria's Mexican Kitchen</span>
+                            </div>
+                            <div class="info-item">
+                                <label>Owner:</label>
+                                <span>Maria Rodriguez</span>
+                            </div>
+                            <div class="info-item">
+                                <label>Category:</label>
+                                <span>Restaurant</span>
+                            </div>
+                            <div class="info-item">
+                                <label>Phone:</label>
+                                <span>(206) 555-0123</span>
+                            </div>
+                            <div class="info-item">
+                                <label>Email:</label>
+                                <span>maria@mariasmexican.com</span>
+                            </div>
+                            <div class="info-item">
+                                <label>Website:</label>
+                                <span>www.mariasmexican.com</span>
+                            </div>
+                        </div>
+
+                        <div class="profile-card">
+                            <h3>Business Performance</h3>
+                            <div class="stat-item">
+                                <h4>4.8</h4>
+                                <p>Average Rating</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>156</h4>
+                                <p>Total Views</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>42</h4>
+                                <p>Favorites</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>28</h4>
+                                <p>Reviews</p>
+                            </div>
+                        </div>
+
+                        <div class="profile-card">
+                            <h3>Quick Actions</h3>
+                            <button class="btn btn-primary">Update Hours</button>
+                            <button class="btn btn-primary">Add Photo</button>
+                            <button class="btn btn-secondary">Create Promotion</button>
+                            <button class="btn btn-secondary">Share on Social Media</button>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <h3>Hours of Operation</h3>
+                        <table class="hours-table">
+                            <tr>
+                                <td><strong>Monday</strong></td>
+                                <td>11:00 AM - 9:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tuesday</strong></td>
+                                <td>11:00 AM - 9:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Wednesday</strong></td>
+                                <td>11:00 AM - 9:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Thursday</strong></td>
+                                <td>11:00 AM - 9:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Friday</strong></td>
+                                <td>11:00 AM - 9:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Saturday</strong></td>
+                                <td>11:00 AM - 9:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sunday</strong></td>
+                                <td>11:00 AM - 9:00 PM</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="analytics" class="tab-content">
+                    <h2>Analytics Dashboard</h2>
+                    <div class="analytics-grid">
+                        <div class="analytics-card">
+                            <h3>Profile Views</h3>
+                            <div class="analytics-number">156</div>
+                            <p class="analytics-change">+12% from last month</p>
+                        </div>
+                        <div class="analytics-card">
+                            <h3>Search Appearances</h3>
+                            <div class="analytics-number">342</div>
+                            <p class="analytics-change">+8% from last month</p>
+                        </div>
+                        <div class="analytics-card">
+                            <h3>Website Clicks</h3>
+                            <div class="analytics-number">89</div>
+                            <p class="analytics-change">+15% from last month</p>
+                        </div>
+                        <div class="analytics-card">
+                            <h3>Phone Calls</h3>
+                            <div class="analytics-number">45</div>
+                            <p class="analytics-change">+23% from last month</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="reviews" class="tab-content">
+                    <h2>Customer Reviews</h2>
+                    <div class="reviews-list">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <h3>Jane Smith</h3>
+                                <div class="review-rating">
+                                    <span class="stars">★★★★★</span>
+                                </div>
+                            </div>
+                            <p class="review-text">Absolutely fantastic! The food was amazing and the service was top-notch. I highly recommend trying their tacos. Can't wait to go back!</p>
+                            <p class="review-date">Posted on March 15, 2024</p>
+                            <button class="btn btn-text">Reply</button>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <h3>Mike Johnson</h3>
+                                <div class="review-rating">
+                                    <span class="stars">★★★★☆</span>
+                                </div>
+                            </div>
+                            <p class="review-text">Great authentic flavors and generous portions. The staff is friendly and the atmosphere is warm and welcoming.</p>
+                            <p class="review-date">Posted on March 10, 2024</p>
+                            <button class="btn btn-text">Reply</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="promotions" class="tab-content">
+                    <h2>Promotions & Announcements</h2>
+                    <div class="promotions-list">
+                        <div class="promotion-card">
+                            <div class="promotion-status active">Active</div>
+                            <h3>Hiring Event</h3>
+                            <p>We're hiring! Join our team at Maria's Mexican Kitchen. Open positions for servers and cooks.</p>
+                            <p class="promotion-dates">March 1 - March 31, 2024</p>
+                            <div class="promotion-actions">
+                                <button class="btn btn-primary">Edit</button>
+                                <button class="btn btn-text">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="promotion-card">
+                            <div class="promotion-status expired">Expired</div>
+                            <h3>Happy Hour Special</h3>
+                            <p>$5 Margaritas every weekday 3-5 PM</p>
+                            <p class="promotion-dates">February 1 - February 28, 2024</p>
+                            <div class="promotion-actions">
+                                <button class="btn btn-primary">Recreate</button>
+                                <button class="btn btn-text">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Create New Promotion</button>
+                </div>
+
+                <div id="settings" class="tab-content">
+                    <h2>Settings</h2>
+                    <div class="profile-card">
+                        <h3>Profile Settings</h3>
+                        <div class="setting-item">
+                            <label>Profile Visibility</label>
+                            <select class="setting-select">
+                                <option value="public">Public</option>
+                                <option value="unlisted">Unlisted</option>
+                                <option value="private">Private</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label>Email Notifications</label>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <label>Review Notifications</label>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <h3>Account Settings</h3>
+                        <button class="btn btn-primary">Change Password</button>
+                        <button class="btn btn-secondary">Update Email</button>
+                        <button class="btn btn-secondary">Deactivate Account</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="shop.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="business-profile.html">My Business</a>
+        </div>
+        <p>&copy; 2025 ThriveTogether | Contact: info@thrivetogether.com</p>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
