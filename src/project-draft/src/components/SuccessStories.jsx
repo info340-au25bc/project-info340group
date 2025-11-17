@@ -19,14 +19,14 @@ const stories = [
 ];
 
 export default function SuccessStories() {
-    (
+    return (
         <section class="success-stories">
             <div class="container">
                 <h2>Success Stories from Local Business Owners</h2>
                 <p class="section-subtitle">See how LocalConnect has helped businesses like yours grow</p>
-            <div className="testimonials-grid">
+                <div class="testimonials-grid">
                 {stories.map((story, index) => (
-                    <article className="testimonial-card" key={index}>
+                    <article class="testimonial-card" key={index}>
                         <div className="testimonial-image">
                             <img src={story.image} alt={story.name} />
                         </div>
@@ -38,8 +38,8 @@ export default function SuccessStories() {
                         </cite>
                     </article>
                 ))}
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
     );
 }

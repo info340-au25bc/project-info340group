@@ -1,23 +1,23 @@
 export default function Hero() {
     return (
-        <section class="business-owner-hero">
-            <div class="container">
-                <div class="hero-content-split">
-                    <div class="hero-text">
+        <section className="business-owner-hero">
+            <div className="container">
+                <div className="hero-content-split">
+                    <div className="hero-text">
                         <h1>Grow Your Local Business</h1>
-                        <p class="hero-lead">
+                        <p className="hero-lead">
                             Connect with customers who want to support local, family-owned, and minority-owned businesses. 
                             Create your free profile and share your story with the community.
                         </p>
-                        <div class="hero-benefits">
+                        <div className="hero-benefits">
                             {["Free business listing", "Reach engaged customers", "Share your unique story", "Build community connections"].map((benefit, i) => (
-                                <div class="benefit-item" key={i}>
-                                <span class="benefit-icon">✓</span>
-                                <span>{benefit}</span>
+                                <div className="benefit-item" key={i}>
+                                    <span className="benefit-icon">✓</span>
+                                    <span>{benefit}</span>
                                 </div>
-                                ))}
-                            </div>
+                            ))}
                         </div>
+                    </div>
                     <div class="hero-image">
                         <img src="img/guy.jpg" alt="Happy business owner in their shop"/>
                     </div>
