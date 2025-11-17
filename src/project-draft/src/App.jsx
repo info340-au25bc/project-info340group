@@ -6,6 +6,7 @@ import BusinessForm from "./components/BusinessForm";
 import SuccessStories from "./components/SuccessStories";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import FilterSort from "./components/FilterSort";
 import '../../css/style.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <main>
         <Intro />
         <Hero />
+        <FilterSort />
         <BusinessForm />
         <SuccessStories />
         <CTA />
