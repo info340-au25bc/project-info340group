@@ -18,6 +18,15 @@ body {
     padding: 0;
 }
 
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 h2, h3, legend {
     color: #1F7A75;
 }
@@ -80,67 +89,134 @@ header {
 
 .intro {
     text-align: center;
-    padding-top: 4rem;
+    padding: 2rem 1rem 4rem 4rem;
     background: #f5f5f5;
-    margin-bottom: 2rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 80vh;
 }
 
 .intro h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #00695c;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    padding-top: 0;
     font-weight: 700;
     letter-spacing: -0.5px;
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .intro p {
-    font-size: 1.3rem;
-    color: #555;
-    line-height: 1.7;
-    max-width: 600px;
-    margin: 0 auto 3rem auto;
-    font-weight: 400;
+    font-size: 0.5rem;
+    color: #666;
+    line-height: 1.2;
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+    font-weight: 100;
+    padding: 0 1rem;
 }
 
 .quiz-form {
     display: flex;
     justify-content: center;
-    margin: 0;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1200px;
 }
 
-.quiz-form form {
+.quiz-form > div {
     background-color: white;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
 }
 
-.quiz-form fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.quiz-form legend {
-    font-size: 1.2rem;
+.quiz-question {
+    font-size: 1.5rem;
     font-weight: 600;
     color: #1F7A75;
     margin-bottom: 1rem;
     padding: 0;
+    text-align: center;
+    width: 100%;
 }
 
-.quiz-form button {
+.quiz-option {
+    padding: 1.25rem 1.5rem;
+    background-color: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    color: #333;
+    width: 100%;
+    text-align: left;
+}
+
+.quiz-option:hover {
+    background-color: #e8f5e9;
+    border-color: #00897b;
+    transform: translateX(4px);
+}
+
+.quiz-option[data-selected="true"] {
+    background-color: #e0f2f1;
+    border-color: #00897b;
+    font-weight: 600;
+    color: #00695c;
+    transform: translateX(4px);
+}
+
+.continue-btn {
     margin-top: 1rem;
     background-color: #00897b;
     color: white;
     border: none;
-    padding: 0.75rem 1.25rem;
-    border-radius: 8px;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
     cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 137, 123, 0.3);
 }
 
-.quiz-form button:hover {
+.continue-btn:hover:not(:disabled) {
     background-color: #00796b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 137, 123, 0.4);
+}
+
+.continue-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.continue-btn:disabled:hover {
+    transform: none;
+    box-shadow: 0 4px 12px rgba(0, 137, 123, 0.3);
 }
 
 /* styling for hriesha's hero section */
@@ -430,11 +506,21 @@ footer {
         margin: 0 auto;
     }
     .quiz-form form {
-        padding: 1.5rem;
+        padding: 2rem 1.5rem;
         width: 95%;
+        max-width: 100%;
+    }
+    .quiz-form legend {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+    .quiz-form label {
+        padding: 1rem 1.25rem;
+        font-size: 1rem;
     }
     .quiz-form button {
-        background-color: #9d9286
+        padding: 0.875rem 2rem;
+        font-size: 1rem;
     }
     .hero-text h1 {
         font-size: 1.8rem;
@@ -485,8 +571,15 @@ footer {
         background-color: #9d9286;
     }
 
-    .quiz-form button {
-        background-color: #9d9286
+    .quiz-form form {
+        padding: 2.5rem 2rem;
+        max-width: 500px;
+    }
+    .quiz-form legend {
+        font-size: 1.3rem;
+    }
+    .quiz-form label {
+        padding: 1.1rem 1.5rem;
     }
 
     .cta-section {
@@ -504,10 +597,6 @@ footer {
     .intro p {
         font-size: 1.1rem;
         max-width: 85%;
-    }
-    .quiz-form form {
-        padding: 2rem;
-        max-width: 400px;
     }
     .hero-text h1 {
         font-size: 2rem;
@@ -547,8 +636,11 @@ footer {
         max-width: 700px;
     }
     .quiz-form form {
-        padding: 2.5rem;
-        max-width: 500px;
+        padding: 3rem 2.5rem;
+        max-width: 550px;
+    }
+    .quiz-form legend {
+        font-size: 1.4rem;
     }
     .hero-content-split {
         flex-direction: row;
@@ -584,7 +676,10 @@ footer {
     }
     .quiz-form form {
         max-width: 600px;
-        padding: 3rem;
+        padding: 3.5rem 3rem;
+    }
+    .quiz-form legend {
+        font-size: 1.5rem;
     }
     .hero-text h1 {
         font-size: 3rem;
@@ -619,8 +714,11 @@ footer {
         max-width: 900px;
     }
     .quiz-form form {
-        max-width: 700px;
-        padding: 3.5rem;
+        max-width: 650px;
+        padding: 3.5rem 4rem;
+    }
+    .quiz-form legend {
+        font-size: 1.5rem;
     }
     .hero-text h1 {
         font-size: 3.5rem;
