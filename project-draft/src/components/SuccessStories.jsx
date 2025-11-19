@@ -20,13 +20,13 @@ const stories = [
 
 export default function SuccessStories() {
     return (
-        <section class="success-stories">
-            <div class="container">
+        <section className="success-stories">
+            <div className="container">
                 <h2>Success Stories from Local Business Owners</h2>
-                <p class="section-subtitle">See how LocalConnect has helped businesses like yours grow</p>
-                <div class="testimonials-grid">
+                <p className="section-subtitle">See how LocalConnect has helped businesses like yours grow</p>
+                <div className="testimonials-grid">
                 {stories.map((story, index) => (
-                    <article class="testimonial-card" key={index}>
+                    <article className="testimonial-card" key={index}>
                         <div className="testimonial-image">
                             <img src={story.image} alt={story.name} />
                         </div>

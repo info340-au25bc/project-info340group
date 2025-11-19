@@ -7,7 +7,7 @@ export default function Header() {
                 </div>
                 <div className="search-container">
                     <span className="search-icon">🔍</span>
-                    <input type="text" class="search-bar" placeholder="Search Bar"/>
+                    <input type="text" clclassNameass="search-bar" placeholder="Search Bar"/>
                 </div>
             </div>
         </header>
