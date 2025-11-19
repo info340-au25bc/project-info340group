@@ -1,11 +1,11 @@
-export default function({ business }){
+export default function BusinessCard({ business }){
     return(
         <div className="business-card">
             <div className="business-image">
                 <img src={business.image} alt={business.name} />
                 <div className="business-badges">
                     {business.badges.map((badge, i) => (
-                        <span key={i} className={`badge badge-${badge.ToLowerCase()}`}>
+                        <span key={i} className={`badge badge-${badge.toLowerCase()}`}>
                             {badge}
                         </span>
                     ))}
@@ -23,8 +23,8 @@ export default function({ business }){
                     <div className="detail-item">📞 {business.phone}</div>
                     <div className="detail-item">🕒 {business.hours}</div>
                 </div>
-                <div className="business-amentities">
-                    {business.amentities.map((am, i) => (
+                <div className="business-amenities">
+                    {business.amenities.map((am, i) => (
                         <span key={i} className="amentity">{am}</span>
                     ))}
                 </div>
