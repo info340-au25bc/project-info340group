@@ -1,11 +1,12 @@
 import Header from './Header';
 import BusinessCard from "./BusinessCard";
+import Footer from './Footer';
 import BUSINESSES from "../data/businesses";
 
 export default function CustomerPage() {
     return (
         <>
-        <Header />
+            <Header />
             <section className="shop-hero">
                 <div className="container">
                     <h2>Discover Amazing Local Businesses</h2>
@@ -26,6 +27,7 @@ export default function CustomerPage() {
                     </div>
                 </div>
             </section>
+            <Footer />
         </>
     );
 }
