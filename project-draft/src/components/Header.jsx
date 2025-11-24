@@ -7,7 +7,11 @@ export default function Header() {
                 </div>
                 <div className="search-container">
                     <span className="search-icon">🔍</span>
-                    <input type="text" className="search-bar" placeholder="Search Bar"/>
+                    <input 
+                    type="text" 
+                    className="search-bar" 
+                    placeholder="Search Bar"
+                    aria-label="Search" />
                 </div>
             </div>
         </header>

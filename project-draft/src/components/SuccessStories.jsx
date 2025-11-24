@@ -3,18 +3,18 @@ const stories = [
         name: "Maria Rodriguez",
         business: "Maria's Mexican Kitchen",
         quote: "ThriveTogether helped me reach customers who truly value authentic, family-owned businesses. In just 6 months, our customer base grew by 40%!", 
-        image: "img/women.jpg"
+        image: "/img/women.jpg"
     },
     {
         name: "Sarah Chen",
         business: "Makers Boutique",
-        quote: "Being listed as an LGBTQ+-owned business brought in so many wonderful customers who share our values. This platform truly makes a difference.", image: "img/boutique.jpg"
+        quote: "Being listed as an LGBTQ+-owned business brought in so many wonderful customers who share our values. This platform truly makes a difference.", image: "/img/boutique.jpg"
     },
     {
         name: "James Williams",
         business: "Bean & Brew Coffee Co.",
         quote: "As a veteran-owned business, it means everything to connect with a community that wants to support us. ThriveTogether made it easy to tell our story.",
-        image: "img/coffeeguy.jpg"
+        image: "/img/coffeeguy.jpg"
     }
 ];
 

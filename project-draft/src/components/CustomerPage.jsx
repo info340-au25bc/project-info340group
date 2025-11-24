@@ -2,6 +2,7 @@ import Header from './Header';
 import BusinessCard from "./BusinessCard";
 import Footer from './Footer';
 import BUSINESSES from "../data/businesses";
+import FilterSort from "./FilterSort";
 
 export default function CustomerPage() {
     return (
@@ -16,6 +17,7 @@ export default function CustomerPage() {
 
             <section className="results-section">
                 <div className="container">
+                    <FilterSort />
                     <div className="results-header">
                         <h3>Showing {BUSINESSES.length} local businesses</h3>
                     </div>
