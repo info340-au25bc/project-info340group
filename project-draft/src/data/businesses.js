@@ -2,7 +2,7 @@ const BUSINESSES = [
     {
       id: 1,
       name: "Maria's Mexican Kitchen",
-      category: "Restaurants & Cafes",
+      category: "Food & Dining",
       location: "1234 Broadway E, Seattle, WA 98102",
       phone: "(206) 555-0123",
       hours: "Mon-Sun: 11am-9pm",
@@ -15,7 +15,7 @@ const BUSINESSES = [
     {
       id: 2,
       name: "Makers Boutique",
-      category: "Retail & Shopping",
+      category: "Retail",
       location: "5678 NW Market St, Seattle, WA 98107",
       phone: "(206) 555-0456",
       hours: "Tue-Sun: 10am-7pm",

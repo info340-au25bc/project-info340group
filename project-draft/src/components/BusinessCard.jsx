@@ -25,7 +25,7 @@ export default function BusinessCard({ business }){
                 </div>
                 <div className="business-amenities">
                     {business.amenities.map((am, i) => (
-                        <span key={i} className="amentity">{am}</span>
+                        <span key={i} className="amenity">{am}</span>
                     ))}
                 </div>
                 <div className="business-actions">

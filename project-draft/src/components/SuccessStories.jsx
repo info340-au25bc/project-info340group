@@ -23,7 +23,7 @@ export default function SuccessStories() {
         <section className="success-stories">
             <div className="container">
                 <h2>Success Stories from Local Business Owners</h2>
-                <p className="section-subtitle">See how LocalConnect has helped businesses like yours grow</p>
+                <p className="section-subtitle">See how ThriveTogether has helped businesses like yours grow</p>
                 <div className="testimonials-grid">
                 {stories.map((story, index) => (
                     <article className="testimonial-card" key={index}>

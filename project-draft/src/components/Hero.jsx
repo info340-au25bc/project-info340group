@@ -19,7 +19,7 @@ export default function Hero() {
                         </div>
                     </div>
                     <div className="hero-image">
-                        <img src="img/guy.jpg" alt="Happy business owner in their shop"/>
+                        <img src="img/guy.jpg" alt="Happy business owner in their shop" />
                     </div>
                 </div>
             </div>
