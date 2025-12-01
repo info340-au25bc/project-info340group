@@ -64,9 +64,21 @@ header {
     padding: 0 1rem;
 }
 
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
 .logo h1 {
     font-size: 1.8rem;
     letter-spacing: 1px;
+    margin: 0;
 }
 
 .search-container {
