@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export default function FilterSort() {
-    const [selectedCategory, setSelectedCategory] = useState('');
-    const [sortBy, setSortBy] = useState('name');
-
+export default function FilterSort({ selectedCategory, sortBy, onCategoryChange, onSortChange }) {
     const categories = [
         'All Categories',
         'Food & Dining',
@@ -21,11 +18,11 @@ export default function FilterSort() {
     ];
 
     const handleCategoryChange = (e) => {
-        setSelectedCategory(e.target.value);
+        onCategoryChange(e.target.value);
     };
 
     const handleSortChange = (e) => {
-        setSortBy(e.target.value);
+        onSortChange(e.target.value);
     };
 
     return (
