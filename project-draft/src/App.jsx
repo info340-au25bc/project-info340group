@@ -4,6 +4,8 @@ import Intro from "./components/Intro";
 import CustomerPage from "./components/CustomerPage";
 import BusinessPage from "./components/BusinessPage";
 import FavoritesPage from './components/FavoritesPage';
+import Signup from './components/Signup';
+import Login from './components/Login';
 import './style.css';
 import { auth, db } from './firebase';
 
@@ -38,6 +40,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Intro />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/customer" element={<CustomerPage
           favorites={favorites}
           toggleFavorite={toggleFavorite} />} />
