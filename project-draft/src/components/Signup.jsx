@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function SignUp(){
     const navigate = useNavigate();
@@ -21,16 +21,21 @@ export default function SignUp(){
         }
     };
     return(
-        <section className="auth-section">
+        <section className="auth-wrapper">
+            <div className="auth-card">
             <h2>Create an Account</h2>
+            <p className="auth-subtext">Join ThriveTogether and support local businesses.</p>
             <form onSubmit={handleSignUp}>
                 {error && <p className="error-text">{error}</p>}
 
                 <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
 
                 <input type="password" placeholder="Password (6 characters)" value={password} onChange={(e) => setPassword(e.target.value)} required />
-                <button className="btn btn-primary">Sign Up</button>
+                <button className="btn-primary auth-btn">Create Account</button>
             </form>
+            <p className="auth-switch">Already have an account?   
+             <Link to="/login"> Log in</Link></p>
+            </div>
         </section>
     );
 }
