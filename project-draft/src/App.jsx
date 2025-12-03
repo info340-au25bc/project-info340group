@@ -8,9 +8,19 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import './style.css';
 import { auth, db } from './firebase';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
 
 /* https://stackoverflow.com/questions/57156433/navigating-to-different-views-screens-in-reactjs-onclick */
 function App() {
+
+  const [currentUser, setCurrentUser] = useState(null);
+
+  useEffect(() => {
+    const unsub = onAuthStateChanged(auth, (user) => {
+      setCurrentUser(user);
+    });
+    return () => unsub();
+  }, []);
 
   console.log("Firebase services loaded:", auth, db);
 
@@ -44,7 +54,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/customer" element={<CustomerPage
           favorites={favorites}
-          toggleFavorite={toggleFavorite} />} />
+          toggleFavorite={toggleFavorite} currentUser={currentUser}/>} />
           <Route path="/business" element={<BusinessPage />} />
           <Route path="/favorites" element={<FavoritesPage favorites={favorites}
           toggleFavorite={toggleFavorite} /> } />

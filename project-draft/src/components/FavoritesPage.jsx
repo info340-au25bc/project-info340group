@@ -7,7 +7,7 @@ export default function FavoritesPage({ favorites, toggleFavorite }){
         <>
         <Header />
         <section className="favorites-page container">
-            <h2>Your Favorite businesses</h2>
+            <h2>Your Favorite Businesses</h2>
             {favorites.length === 0 ? (
                 <p>You haven't added any favorites yet.</p>
             ) : (

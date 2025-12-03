@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase";
 
-export default function Header() {
+export default function Header({ currentUser }) {
+    const handleLogout = async () => {
+        await signOut(auth);
+    };
+
     return (
         <header>
             <div className="header-container">
@@ -10,8 +16,12 @@ export default function Header() {
                     </Link>
                 </div>
                 <div className="auth-links">
-                    <Link to="/login" className="btn btn-link">Log In</Link>
-                    <Link to="/signup" className="btn btn-primary">Sign Up</Link>
+                    {!currentUser && (
+                        <>
+                        <Link to="/login" className="btn btn-primary">Log In</Link>
+                        <Link to="/signup" className="btn btn-primary">Sign Up</Link>
+                        </>
+                    )}
                 </div>
                 <div className="search-container">
                     <span className="search-icon">🔍</span>
