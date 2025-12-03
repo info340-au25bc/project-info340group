@@ -1,11 +1,11 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Header from './Header';
 import BusinessCard from "./BusinessCard";
 import Footer from './Footer';
 import BUSINESSES from "../data/businesses";
 import FilterSort from "./FilterSort";
 
-export default function CustomerPage() {
+export default function CustomerPage({ favorites, toggleFavorite }) {
     const [selectedCategory, setSelectedCategory] = useState('');
     const [sortBy, setSortBy] = useState('name');
 
@@ -61,7 +61,11 @@ export default function CustomerPage() {
 
                     <div className="business-grid">
                         {filteredAndSortedBusinesses.map(biz => (
-                            <BusinessCard key={biz.id} business={biz} />
+                            <BusinessCard 
+                            key={biz.id} 
+                            business={biz} 
+                            toggleFavorite={toggleFavorite}
+                            isFavorite={favorites.some(f => f.id === biz.id)} />
                         ))}
                     </div>
                 </div>

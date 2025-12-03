@@ -1,4 +1,4 @@
-export default function BusinessCard({ business }){
+export default function BusinessCard({ business, isFavorite, toggleFavorite }){
     return(
         <div className="business-card">
             <div className="business-image">
@@ -30,7 +30,9 @@ export default function BusinessCard({ business }){
                 </div>
                 <div className="business-actions">
                     <button className="btn btn-primary btn-sm">View Details</button>
-                    <button className="btn btn-secondary btn-sm">Add to Favorites</button>
+                    <button className="btn btn-secondary btn-sm" onClick={()=> toggleFavorite(business)}>
+                        {isFavorite ? "Remove Favorite" : "Add to Favorites"}
+                    </button>
                 </div>
             </div>
         </div>
