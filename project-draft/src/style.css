@@ -502,6 +502,12 @@ input.error:focus, select.error:focus, textarea.error:focus {
     font-weight: 600;
     border: none;
     cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: "Georgia", Arial, Helvetica, sans-serif;
+    text-align: center;
+    transition: background-color 0.2s ease;
 }
 
 .btn-primary {
@@ -511,6 +517,7 @@ input.error:focus, select.error:focus, textarea.error:focus {
 
 .btn-primary:hover {
     background-color: #004d40;
+    text-decoration: underline;
 }
 
 .btn-secondary {
