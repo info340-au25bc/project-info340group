@@ -592,6 +592,35 @@ footer {
     min-height: 60vh;
 }
 
+/* Empty Favorites State */
+.empty-favorites {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.empty-favorites-text {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.empty-favorites-subtext {
+    font-size: 1.125rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.empty-favorites-subtext a {
+    color: #00695c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.empty-favorites-subtext a:hover {
+    text-decoration: underline;
+}
+
 .footer-nav {
     display: flex;
     justify-content: center;
