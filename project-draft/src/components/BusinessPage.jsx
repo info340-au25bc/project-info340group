@@ -6,7 +6,7 @@ import Footer from './Footer';
 export default function BusinessPage() {
     return (
         <>
-            <Header currentUser={currentUser}/>
+            <Header />
             <Hero />
             <BusinessForm />
             <Footer />
