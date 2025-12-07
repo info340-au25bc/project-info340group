@@ -55,9 +55,9 @@ function App() {
           <Route path="/customer" element={<CustomerPage
           favorites={favorites}
           toggleFavorite={toggleFavorite} currentUser={currentUser}/>} />
-          <Route path="/business" element={<BusinessPage />} />
+          <Route path="/business" element={<BusinessPage currentUser={currentUser} />} />
           <Route path="/favorites" element={<FavoritesPage favorites={favorites}
-          toggleFavorite={toggleFavorite} /> } />
+          toggleFavorite={toggleFavorite} currentUser={currentUser} /> } />
         </Routes>
       </main>
     </Router>

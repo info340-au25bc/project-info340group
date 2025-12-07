@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate, Link } from "react-router-dom";
 
@@ -8,13 +8,29 @@ export default function Login(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(null);
+    const [currentUser, setCurrentUser] = useState(null);
+
+    // https://www.back4app.com/docs/react/working-with-users/get-current-user-react
+    const getCurrentUser = function () {
+        const user = auth.currentUser;
+        setCurrentUser(user);
+        return user;
+    };
 
     const handleLogin = async (e) => {
         e.preventDefault();
         setError(null);
     
         try{
-            await signInWithEmailAndPassword(auth, email, password);
+            const loggedInUser = await signInWithEmailAndPassword(auth, email, password);
+            const user = auth.currentUser;
+            console.log(loggedInUser === user);
+            
+            setEmail("");
+            setPassword("");
+            
+            getCurrentUser();
+            
             navigate("/customer");
         } catch (err) {
             setError("Invalid email or password");

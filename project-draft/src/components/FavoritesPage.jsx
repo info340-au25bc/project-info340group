@@ -2,10 +2,10 @@ import Header from "./Header";
 import Footer from "./Footer";
 import BusinessCard from "./BusinessCard";
 
-export default function FavoritesPage({ favorites, toggleFavorite }){
+export default function FavoritesPage({ favorites, toggleFavorite, currentUser }){
     return (
         <>
-        <Header />
+        <Header currentUser={currentUser} />
         <section className="favorites-page container">
             <h2>Your Favorite Businesses</h2>
             {favorites.length === 0 ? (

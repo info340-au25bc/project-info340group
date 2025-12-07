@@ -29,7 +29,6 @@ export default function BusinessCard({ business, isFavorite, toggleFavorite }){
                     ))}
                 </div>
                 <div className="business-actions">
-                    <button className="btn btn-primary btn-sm">View Details</button>
                     <button className="btn btn-secondary btn-sm" onClick={()=> toggleFavorite(business)}>
                         {isFavorite ? "Remove Favorite" : "Add to Favorites"}
                     </button>

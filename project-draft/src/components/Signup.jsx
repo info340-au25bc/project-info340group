@@ -8,13 +8,28 @@ export default function SignUp(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(null);
+    const [currentUser, setCurrentUser] = useState(null);
+
+    const getCurrentUser = function () {
+        const user = auth.currentUser;
+        setCurrentUser(user);
+        return user;
+    };
 
     const handleSignUp = async (e) => {
         e.preventDefault();
         setError(null);
 
         try{
-            await createUserWithEmailAndPassword(auth, email, password);
+            const newUser = await createUserWithEmailAndPassword(auth, email, password);
+            const user = auth.currentUser;
+            console.log(newUser === user);
+            
+            setEmail("");
+            setPassword("");
+            
+            getCurrentUser();
+            
             navigate("/customer");
         } catch (err) {
             setError(err.message);
