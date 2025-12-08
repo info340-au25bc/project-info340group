@@ -29,7 +29,7 @@ export default function CustomerPage({ favorites, toggleFavorite, currentUser })
         }
 
         if (selectedCategory) {
-            filtered = filtered.filter(biz => biz.category === selectedCategory);
+            filtered = filtered.filter(biz => biz.category.toLowerCase() === selectedCategory.toLowerCase());
         }
 
         // Then, sort the filtered results
@@ -70,6 +70,16 @@ export default function CustomerPage({ favorites, toggleFavorite, currentUser })
                         onCategoryChange={setSelectedCategory}
                         onSortChange={setSortBy}
                     />
+                    <button 
+                        className="clear-btn"
+                        onClick={() => {
+                            setSelectedCategory('');
+                            setSortBy('name');
+                            setSearchQuery('');
+                        }}
+                    >
+                        Clear All Filters
+                    </button>
                     <div className="results-header">
                         <h3>Showing {filteredAndSortedBusinesses.length} local businesses</h3>
                     </div>

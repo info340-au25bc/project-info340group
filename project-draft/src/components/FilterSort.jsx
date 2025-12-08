@@ -66,3 +66,4 @@ export default function FilterSort({ selectedCategory, sortBy, onCategoryChange,
     );
 }
 
+
