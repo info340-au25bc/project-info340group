@@ -7,6 +7,7 @@ export default function Footer() {
                 <Link to="/">Home</Link>
                 <Link to="/customer">Customers</Link>
                 <Link to="/business">Businesses</Link>
+                <Link to="/favorites">Favorites</Link>
             </div>
             <p>&copy; 2025 ThriveTogether | Contact: info@thrivetogether.com</p>
         </footer>
