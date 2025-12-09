@@ -88,6 +88,16 @@ header {
     border-radius: 25px;
     padding: 0.4rem 1rem;
 }
+.search-container input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    width: 200px;
+}
+
+.search-container button {
+    margin-left: 0.5rem;
+}
 
 .search-icon {
     margin-right: 0.5rem;
@@ -585,6 +595,20 @@ footer {
         padding: 1rem 0;
     }
 
+    .logo h1 {
+        font-size: 1.2rem;
+        padding-right: 1rem;
+    }
+
+    .search-container {
+        padding: 0.3rem 0.6rem;
+        max-width: 90%;
+    }
+
+    .search-container input {
+        font-size: 0.9rem;
+    }
+
     .business-owner-hero > .container {
         background-color: #e0d3c4;
         border-radius: 8px;
@@ -707,6 +731,10 @@ footer {
     }
     .hours-inputs, .checkbox-list {
         gap: 1.2rem;
+    }
+
+    .logo h1 {
+        padding-right: 1rem;
     }
 }
 
