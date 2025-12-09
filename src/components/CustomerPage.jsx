@@ -5,7 +5,7 @@ import Footer from './Footer';
 import BUSINESSES from "../data/businesses";
 import FilterSort from "./FilterSort";
 
-export default function CustomerPage({ favorites, toggleFavorite, currentUser }) {
+export default function CustomerPage({ favorites = [] , toggleFavorite, currentUser }) {
     const [selectedCategory, setSelectedCategory] = useState('');
     const [sortBy, setSortBy] = useState('name');
     const [searchQuery, setSearchQuery] = useState('');
